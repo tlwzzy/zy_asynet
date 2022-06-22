@@ -35,6 +35,10 @@ class AbstractTrainer(abc.ABC):
         self.nr_train_epochs = None
         self.model_input_size = None
 
+        # 此处修改了网络输入的维度。
+        # 从最终shape来看，我们的方法只是简单地改变了输入的通道数
+        # 故在此根据不同的设置，定义对应的通道数。
+
         if self.settings.event_representation == 'histogram':
             self.nr_input_channels = 2
         elif self.settings.event_representation == 'event_queue':

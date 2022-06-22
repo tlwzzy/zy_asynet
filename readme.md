@@ -1,9 +1,16 @@
+# 张怡改动版 Event-based Asynchronous Sparse Convolutional Networks
+
+rpg_asynet的魔改版
+魔改的部分：输入
+dataloader时，使用了不同的建帧（事件的表示）方法
+最终两种互补的建帧方法提升很明显
+<!-- 
 # Event-based Asynchronous Sparse Convolutional Networks
 <p align="center">
   <a href="https://youtu.be/VD7Beh_-7eU">
     <img src="resources/thumbnail.png" alt="Video to Events" width="400"/>
   </a>
-</p>
+</p> -->
 
 This is the code for the paper **Event-based Asynchronous Sparse Convolutional Networks** 
 ([PDF](http://rpg.ifi.uzh.ch/docs/ECCV20_Messikommer.pdf)) by Nico Messikommer*, [Daniel Gehrig*](https://danielgehrig18.github.io), 

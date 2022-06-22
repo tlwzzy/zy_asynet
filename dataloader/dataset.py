@@ -11,6 +11,10 @@ import torch
 from dataloader.prophesee import dat_events_tools
 from dataloader.prophesee import npy_events_tools
 
+# 此处直接从github项目中弄来voxel_grid的表示部分
+# 具体的可以参考demo
+# 如何把别人项目里的东西拿过来用
+
 def events_to_image(xs, ys, ps, sensor_size=(180, 240), interpolation=None, padding=False, meanval=False, default=0):
     """
     Place events into an image using numpy
@@ -233,6 +237,10 @@ class NCaltech101:
 
         return events, label, histogram
 
+    # 此处又一关键改动
+    # 事件的表示，具体是如何生成的
+    # 实际上，其他的改动也都是为了这点东西服务
+    # 在此处定义后，在config.yml里可以进行调用了
     def generate_input_representation(self, events, shape):
         """
         Events: N x 4, where cols are x, y, t, polarity, and polarity is in {0,1}. x and y correspond to image
